@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/cv_diary"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dim_15"
+        card_view:cardCornerRadius="@dimen/dim_13">
+
+
+        <ImageView
+            android:id="@+id/iv_diary"
+            android:layout_width="@dimen/dim_50"
+            android:layout_height="@dimen/dim_50"
+            android:paddingTop="@dimen/dim_15"
+            android:paddingStart="@dimen/dim_15"
+            android:src="@drawable/category_diary"/>
+
+        <TextView
+            android:id="@+id/info_text"
+            android:text="@string/diary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat"
+            android:textColor="@color/black"
+            android:paddingTop="@dimen/dim_15"
+            android:paddingStart="@dimen/dim_15"
+            android:textSize="@dimen/dim_15sp"
+            android:layout_marginStart="@dimen/dim_50"
+            tools:ignore="RtlSymmetry" />
+
+        <TextView
+            android:id="@+id/info_number"
+            android:text="@string/you_have_3_ingredients"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat"
+            android:textSize="@dimen/dim_11sp"
+            android:textColor="@color/bold_grey_txt"
+            android:paddingTop="@dimen/dim_35"
+            android:paddingStart="@dimen/dim_15"
+            android:layout_marginStart="@dimen/dim_50"
+            tools:ignore="RtlSymmetry" />
+
+
+        <Button
+            android:id="@+id/btn_collapse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/arrow_down"
+            android:layout_gravity="end"
+            android:paddingTop="@dimen/dim_15"
+            style="@style/Widget.AppCompat.Button.Borderless"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_gravity="start"
+            android:layout_marginTop="@dimen/dim_60"
+            android:background="@color/btn_opacity" />
+
+        <android.widget.Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dim_70"
+            android:layout_marginStart="@dimen/dim_15"
+            android:background="@drawable/btn_rectangle_shape"
+            android:text="@string/add"
+            android:fontFamily="@font/montserrat"
+            android:textSize="@dimen/dim_15sp"
+            android:layout_marginBottom="@dimen/dim_15"
+            android:textColor="@color/main_color"
+            android:textAllCaps="false"/>
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>

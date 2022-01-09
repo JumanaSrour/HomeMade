@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".feature.addPost.AddPostActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/main_color">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dim_10">
+
+            <ImageView
+                android:id="@+id/profile_home"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="@dimen/dim_48"
+                android:layout_height="@dimen/dim_48"
+                android:layout_gravity="start"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/back_white" />
+
+            <TextView
+                android:id="@+id/tv_ingredients"
+                style="@style/TextViewStyle"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="@dimen/dim_10"
+                android:fontFamily="@font/montserrat"
+                android:paddingLeft="@dimen/dim_140"
+                android:text="@string/new_post"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dim_18sp" />
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="@dimen/dim_30"
+        android:layout_height="wrap_content">
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:backgroundTint="@null"
+            android:layout_margin="@dimen/dim_10"
+            android:drawableLeft="@drawable/ic_camera"
+            android:paddingStart="@dimen/dim_35"
+            android:layout_gravity="center"
+            android:drawableTint="@color/txt_color"
+            android:background="@drawable/btn_square_shape"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:backgroundTint="@null"
+            android:drawableEnd="@drawable/ic_add"
+            android:paddingEnd="@dimen/dim_35"
+            android:background="@drawable/btn_square_shape"/>
+    </LinearLayout>
+
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/TextViewStyle"
+        android:paddingTop="@dimen/dim_10"
+        android:textSize="@dimen/dim_14sp"
+        android:layout_marginHorizontal="@dimen/dim_20"
+        android:text="@string/recipe_name" />
+
+<!--    <com.google.android.material.textfield.TextInputLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content">-->
+
+        <EditText
+            android:id="@+id/editTextTextPersonName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:paddingTop="@dimen/dim_5"
+            android:layout_marginHorizontal="@dimen/dim_20"
+            android:paddingBottom="@dimen/dim_20"
+            android:inputType="text"
+            android:paddingStart="@dimen/dim_5"
+            style="@style/TextInputEditTextStyleGray" />
+<!--    </com.google.android.material.textfield.TextInputLayout>-->
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dim_20"
+        style="@style/TextViewStyle"
+        android:paddingTop="@dimen/dim_10"
+        android:textSize="@dimen/dim_14sp"
+        android:text="@string/description" />
+
+
+<!--    <com.google.android.material.textfield.TextInputLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content">-->
+        <EditText
+            android:id="@+id/editTextTextPersonName2"
+            android:maxLines="10"
+            android:paddingTop="@dimen/dim_5"
+            style="@style/TextInputEditTextStyleGray"
+            android:paddingBottom="@dimen/dim_20"
+            android:paddingStart="@dimen/dim_5"
+            android:layout_marginHorizontal="@dimen/dim_20"
+            android:inputType="textMultiLine"
+            android:textColorHint="@color/et_comment"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"/>
+
+<!--    </com.google.android.material.textfield.TextInputLayout>-->
+
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="@dimen/dim_20"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/dim_14sp"
+        style="@style/TextViewStyle"
+        android:textColor="@color/txt_color"
+        android:paddingTop="@dimen/dim_10"
+        android:text="@string/youtube_video_link_optional" />
+
+<!--    <com.google.android.material.textfield.TextInputLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content">-->
+        <EditText
+            android:id="@+id/editTextTextPersonName3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="3"
+            android:paddingTop="@dimen/dim_5"
+            android:paddingStart="@dimen/dim_5"
+            android:layout_marginHorizontal="@dimen/dim_20"
+            style="@style/TextInputEditTextStyleGray"
+            android:paddingBottom="@dimen/dim_20"
+            android:paddingHorizontal="@dimen/dim_20"
+            android:inputType="textMultiLine"/>
+<!--    </com.google.android.material.textfield.TextInputLayout>-->
+
+
+</LinearLayout>
+
+
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dim_20"
+        android:text="@string/post"
+        android:textAllCaps="false"
+        android:layout_gravity="bottom"
+        android:fontFamily="@font/sfuitext_regular"
+        android:background="@drawable/btn_regular"/>
+</LinearLayout>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_color"
+    android:orientation="vertical"
+    tools:context=".feature.profile.view.ProfileActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/main_color">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dim_10">
+
+            <ImageButton
+                android:id="@+id/back_profile"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="@dimen/dim_30"
+                android:layout_height="@dimen/dim_30"
+                android:src="@drawable/back_white"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <TextView
+                android:id="@+id/tv_my_profile"
+                style="@style/TextViewStyle"
+                android:layout_alignParentStart="true"
+                android:fontFamily="@font/montserrat"
+                android:paddingLeft="@dimen/dim_150"
+                android:text="@string/my_profile"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dim_18sp" />
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_main_shape"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:paddingTop="@dimen/dim_30">
+
+
+        <ImageView
+            android:id="@+id/iv_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/edit_profile_icon" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            style="@style/TextViewStyle"
+            android:paddingTop="@dimen/dim_15sp"
+            android:textStyle="normal"
+            android:text="@string/regina_pollastro"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dim_24sp" />
+
+        <TextView
+            android:id="@+id/tv_email"
+            style="@style/TextViewStyle"
+            android:paddingTop="@dimen/dim_5"
+            android:text="@string/regina_pollastro_gamilc_com"
+            android:textSize="@dimen/dim_16sp"
+            android:textColor="@color/bold_grey_txt" />
+
+
+        <LinearLayout
+            android:id="@+id/ll_edit_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingStart="@dimen/dim_10"
+                android:paddingTop="@dimen/dim_27"
+                android:src="@drawable/shape_edit" />
+
+            <Button
+                android:id="@+id/btn_edit_profile"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dim_30"
+                android:layout_weight="1"
+                android:drawableEnd="@drawable/shape_next"
+                android:fontFamily="@font/montserrat"
+                android:paddingLeft="@dimen/dim_10"
+                android:text="@string/edit_profile"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dim_15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_change_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingStart="@dimen/dim_10"
+                android:paddingTop="@dimen/dim_27"
+                android:src="@drawable/shape_lock" />
+
+            <Button
+                android:id="@+id/btn_change_password"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dim_30"
+                android:layout_weight="1"
+                android:drawableEnd="@drawable/shape_next"
+                android:fontFamily="@font/montserrat"
+                android:paddingLeft="@dimen/dim_10"
+                android:text="@string/change_password"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dim_15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="bottom"
+        android:orientation="vertical"
+            tools:ignore="NestedWeights">
+        <TextView
+            android:id="@+id/tv_logout"
+            style="@style/TextViewStyle"
+            android:layout_marginBottom="@dimen/dim_52"
+            android:padding="@dimen/dim_10"
+            android:text="@string/log_out"
+            android:textColor="@color/main_color"
+            android:textSize="@dimen/dim_16sp"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

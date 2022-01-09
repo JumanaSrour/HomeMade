@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    style="@style/corner_dialog"
+    android:background="@drawable/layout_rounded">
+
+    <TextView
+        android:id="@+id/tv_alert_title"
+        android:layout_width="match_parent"
+        android:text="@string/recipes_by"
+        android:layout_weight="1"
+        android:textAlignment="center"
+        android:padding="@dimen/dim_10"
+        android:textColor="@color/black"
+        android:textSize="@dimen/dim_16sp"
+        style="@style/TextViewStyle"/>
+
+        <LinearLayout
+            android:paddingTop="@dimen/dim_10"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btn_alert_users"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginEnd="@dimen/dim_20"
+                android:layout_marginStart="@dimen/dim_20"
+                android:fontFamily="@font/montserrat"
+                android:background="@drawable/btn_regular"
+                android:gravity="center"
+                android:text="@string/recipes_posted_by_users"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textSize="12sp"
+                app:backgroundTint="@null" />
+
+            <Button
+                android:id="@+id/btn_alert_app"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:background="@drawable/btn_regular"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="@dimen/dim_10"
+                android:layout_marginStart="@dimen/dim_20"
+                android:layout_marginEnd="@dimen/dim_20"
+                android:fontFamily="@font/montserrat"
+                android:text="@string/recipes_from_the_app"
+                android:textAllCaps="false"
+                android:textSize="12sp"
+                app:backgroundTint="@null" />
+
+            <Button
+                android:id="@+id/btn_alert_online"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:background="@drawable/btn_regular"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="@dimen/dim_10"
+                android:layout_marginStart="@dimen/dim_20"
+                android:layout_marginEnd="@dimen/dim_20"
+                android:fontFamily="@font/montserrat"
+                android:text="@string/results_from_the_internet"
+                android:textAllCaps="false"
+                android:textSize="12sp"
+                android:layout_marginBottom="@dimen/dim_35"
+                app:backgroundTint="@null" />
+
+        </LinearLayout>
+</LinearLayout>

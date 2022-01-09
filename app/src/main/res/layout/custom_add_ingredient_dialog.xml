@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout class="androidx.appcompat.app.AlertController$RecycleListView"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    style="@style/corner_dialog"
+    android:background="@drawable/layout_rounded"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Button
+        android:id="@+id/ib_cancel_ingredient"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/cancel" />
+
+
+    <TextView
+        android:id="@+id/tv_add_ingredient"
+        style="@style/TextViewStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dim_50"
+        android:layout_marginTop="@dimen/dim_20"
+        android:layout_toEndOf="@+id/ib_cancel_ingredient"
+        android:text="@string/add_ingredient"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/dim_18sp" />
+
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/search_ingredient"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dim_10"
+        android:layout_below="@+id/tv_add_ingredient"
+        android:background="@drawable/search_bg_grey"/>
+
+    <Button
+        android:id="@+id/btn_add_ingredient"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:background="@drawable/btn_regular"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="@dimen/dim_10"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/add_ingredient_dialog"
+        android:textAllCaps="false"
+        android:textSize="@dimen/dim_15sp"
+        android:layout_below="@id/search_ingredient"
+        android:layout_marginBottom="@dimen/dim_35"
+        app:backgroundTint="@null" />
+
+</RelativeLayout>

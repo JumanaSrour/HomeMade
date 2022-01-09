@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".feature.home.view.fragments.HomeFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/category_card_item"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+    <LinearLayout
+        android:id="@+id/ll_pantry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dim_10"
+        android:background="@drawable/bg_shape"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/btn_my_pantry"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dim_8"
+            android:layout_weight="1"
+            app:backgroundTint="@null"
+            android:background="@drawable/btn_rectangle_shape"
+            android:fontFamily="@font/sfuitext_regular"
+            android:text="@string/my_pantry"
+            android:textAllCaps="false"
+            android:textColor="@color/bold_grey_txt"
+            android:textSize="@dimen/dim_14sp" />
+
+        <Button
+            android:id="@+id/btn_see_recipes"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dim_15"
+            android:layout_marginEnd="@dimen/dim_8"
+            android:layout_weight="1"
+            app:backgroundTint="@null"
+            android:background="@drawable/btn_rectangle_shape"
+            android:fontFamily="@font/sfuitext_regular"
+            android:text="@string/see_recipes"
+            android:textAllCaps="false"
+            android:textColor="@color/bold_grey_txt"
+            android:textSize="@dimen/dim_14sp" />
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/main_color"
+    tools:context=".feature.changePassword.view.ChangePasswordActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/main_color">
+
+        <RelativeLayout
+            android:layout_marginTop="@dimen/dim_10"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center">
+
+            <ImageButton
+                android:id="@+id/back_editProfile"
+                android:layout_width="@dimen/dim_30"
+                android:layout_height="@dimen/dim_30"
+                android:src="@drawable/back_white"
+                style="@style/Widget.AppCompat.Button.Borderless"/>
+
+            <TextView
+                android:id="@+id/tv_edit_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/edit_profile"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dim_18sp"
+                android:paddingLeft="@dimen/dim_150"
+                android:fontFamily="@font/montserrat"
+                android:layout_alignParentStart="true"/>
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/bg_main_shape">
+
+        <ImageView
+            android:id="@+id/iv_edit_profile"
+            android:layout_width="@dimen/dim_95"
+            android:layout_height="@dimen/dim_95"
+            android:layout_marginTop="@dimen/dim_30"
+            android:layout_gravity="center"
+            android:src="@drawable/edit_profile_icon"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txt_il_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/ed_name_editProfile"
+                style="@style/TextInputEditTextStyle"
+                android:layout_marginTop="@dimen/dim_15"
+                android:layout_marginStart="@dimen/dim_30"
+                android:layout_marginEnd="@dimen/dim_30"
+                android:imeOptions="actionNext"
+                android:hint="@string/name"
+                android:inputType="textPersonName"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txt_il_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/ed_email_editProfile"
+                style="@style/TextInputEditTextStyle"
+                android:layout_marginTop="@dimen/dim_15"
+                android:layout_marginStart="@dimen/dim_30"
+                android:layout_marginEnd="@dimen/dim_30"
+                android:clickable="false"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="@dimen/dim_325"
+            android:layout_height="@dimen/dim_52"
+            app:backgroundTint="@null"
+            android:layout_marginTop="@dimen/dim_30"
+            android:background="@drawable/btn_regular"
+            android:text="@string/save"
+            android:textAllCaps="false"
+            android:layout_gravity="center"
+            android:textSize="@dimen/dim_15"
+            android:fontFamily="@font/sfuitext_regular"/>
+    </LinearLayout>
+</LinearLayout>

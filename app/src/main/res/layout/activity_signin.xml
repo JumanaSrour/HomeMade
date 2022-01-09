@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".feature.signin.view.SignInActivity">
+
+
+    <TextView
+        android:id="@+id/tv_app_name"
+        style="@style/TextViewStyle"
+        android:text="@string/homemade"
+        android:paddingTop="@dimen/dim_150"
+        android:textStyle="normal"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/tv_desc"
+        style="@style/TextViewStyle"
+        android:textAlignment="center"
+        android:textColor="@color/txt_color"
+        android:textSize="@dimen/dim_14sp"
+        android:textStyle="normal"
+        android:layout_margin="@dimen/dim_10"
+        android:text="@string/where_you_can_easily_find_your_assistant_chief" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/dim_30">
+
+        <com.facebook.login.widget.LoginButton
+            android:id="@+id/btn_facebook"
+            android:layout_width="@dimen/dim_159"
+            android:height="@dimen/dim_52"
+            android:background="@drawable/btn_facebook"
+            app:backgroundTint="@null"
+            android:text="@string/facebook"
+            android:drawableLeft="@drawable/facebook_icon"
+            android:textAllCaps="false"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:fontFamily="@font/sfuitext_regular"
+            android:layout_marginStart="@dimen/dim_8"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_or_signup_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dim_30"
+        android:textSize="@dimen/dim_14sp"
+        android:layout_marginBottom="@dimen/dim_20"
+        android:text="@string/or_sign_up_with_email"
+        android:fontFamily="@font/montserrat"
+        android:textColor="@color/txt_color"
+        android:textAlignment="center"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txt_il_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/ed_email_signIn"
+            style="@style/TextInputEditTextStyle"
+            android:layout_marginStart="@dimen/dim_30"
+            android:layout_marginTop="@dimen/dim_10"
+            android:layout_marginEnd="@dimen/dim_30"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"/>
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txt_il_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/ed_password_signIn"
+            style="@style/TextInputEditTextStyle"
+            android:layout_marginTop="@dimen/dim_15"
+            android:layout_marginStart="@dimen/dim_30"
+            android:layout_marginEnd="@dimen/dim_30"
+            android:imeOptions="actionDone"
+            android:hint="@string/password"
+            android:inputType="textPassword"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tv_forget_password"
+        style="@style/TextViewStyle"
+        android:text="@string/forgot_password"
+        android:layout_marginTop="@dimen/dim_30"
+        android:layout_marginBottom="@dimen/dim_30"
+        android:textSize="@dimen/dim_14sp"
+        android:textStyle="normal"
+        android:textColor="@color/txt_color"/>
+
+    <Button
+        android:id="@+id/btn_signIn"
+        android:layout_width="@dimen/dim_325"
+        android:layout_height="@dimen/dim_52"
+        app:backgroundTint="@null"
+        android:background="@drawable/btn_regular"
+        android:text="@string/sign_in"
+        android:textAllCaps="false"
+        android:layout_gravity="center"
+        android:textSize="@dimen/dim_15sp"
+        android:fontFamily="@font/sfuitext_regular"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_not_have_account"
+            style="@style/TextViewStyle"
+            android:textColor="@color/bold_grey_txt"
+            android:textAllCaps="false"
+            android:textAlignment="textEnd"
+            android:layout_marginTop="@dimen/dim_30"
+            android:textSize="@dimen/dim_12sp"
+            android:paddingStart="80dp"
+            android:textStyle="normal"
+            android:layout_weight="1"
+            android:text="@string/don_t_have_an_account" />
+        <Button
+            android:id="@+id/btn_signup_signIn"
+            android:layout_width="wrap_content"
+            android:textAllCaps="false"
+            android:textAlignment="textStart"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dim_30"
+            android:textSize="@dimen/dim_11sp"
+            android:layout_weight="1"
+            android:paddingEnd="@dimen/dim_100"
+            android:textColor="@color/black"
+            android:text="@string/sign_up"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:fontFamily="@font/montserrat"
+            android:layout_height="wrap_content"
+            tools:ignore="RtlCompat" />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

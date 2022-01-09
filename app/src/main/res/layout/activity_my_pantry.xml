@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".feature.diaplayPantry.MyPantryActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/main_color">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dim_10">
+
+            <ImageButton
+                android:id="@+id/profile_home"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="@dimen/dim_48"
+                android:layout_height="@dimen/dim_48"
+                android:layout_gravity="start"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/back_white" />
+
+            <TextView
+                android:id="@+id/tv_ingredients"
+                style="@style/TextViewStyle"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="@dimen/dim_10"
+                android:fontFamily="@font/montserrat"
+                android:paddingLeft="@dimen/dim_140"
+                android:text="@string/my_pantry"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dim_18sp" />
+
+
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/sv_search"
+                android:layout_width="match_parent"
+                android:layout_margin="@dimen/dim_15"
+                android:background="@drawable/search_bg"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_ingredients"/>
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_pantry"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/pantry_card_item"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="vertical"/>
+
+    <LinearLayout
+        android:id="@+id/ll_pantry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dim_10"
+        android:gravity="bottom"
+        android:background="@drawable/bg_shape"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/btn_my_pantry_pantry"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dim_8"
+            android:layout_weight="1"
+            app:backgroundTint="@null"
+            android:background="@drawable/btn_rectangle_shape"
+            android:fontFamily="@font/sfuitext_regular"
+            android:text="@string/add_more"
+            android:textAllCaps="false"
+            android:textColor="@color/bold_grey_txt"
+            android:textSize="@dimen/dim_14sp" />
+
+        <Button
+            android:id="@+id/btn_see_recipes_pantry"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dim_15"
+            android:layout_marginEnd="@dimen/dim_8"
+            android:layout_weight="1"
+            app:backgroundTint="@null"
+            android:background="@drawable/btn_rectangle_shape"
+            android:fontFamily="@font/sfuitext_regular"
+            android:text="@string/see_recipes"
+            android:textAllCaps="false"
+            android:textColor="@color/bold_grey_txt"
+            android:textSize="@dimen/dim_14sp" />
+    </LinearLayout>
+</LinearLayout>

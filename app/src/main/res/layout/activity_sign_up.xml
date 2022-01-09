@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".feature.signin.view.SignInActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/dim_30">
+
+        <ImageButton
+            android:id="@+id/exit_signup"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:src="@drawable/exit" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/tv_app_name"
+        style="@style/TextViewStyle"
+        android:paddingTop="@dimen/dim_80"
+        android:text="@string/homemade"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/tv_desc"
+        style="@style/TextViewStyle"
+        android:layout_margin="@dimen/dim_10"
+        android:text="@string/where_you_can_easily_find_your_assistant_chief"
+        android:textColor="@color/txt_color"
+        android:textSize="@dimen/dim_14sp" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/ed_name_signup"
+            style="@style/TextInputEditTextStyle"
+            android:layout_marginTop="@dimen/dim_10"
+            android:layout_marginEnd="@dimen/dim_30"
+            android:layout_marginStart="@dimen/dim_30"
+            android:hint="@string/name"
+            android:inputType="textPersonName"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/ed_email_signup"
+            style="@style/TextInputEditTextStyle"
+            android:layout_marginStart="@dimen/dim_30"
+            android:layout_marginTop="@dimen/dim_15"
+            android:layout_marginEnd="@dimen/dim_30"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/ed_password_signup"
+            style="@style/TextInputEditTextStyle"
+            android:layout_marginStart="@dimen/dim_30"
+            android:layout_marginTop="@dimen/dim_15"
+            android:layout_marginEnd="@dimen/dim_30"
+            android:hint="@string/password"
+            android:inputType="textPassword"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/ed_confirm_password"
+            style="@style/TextInputEditTextStyle"
+            android:layout_marginStart="@dimen/dim_30"
+            android:layout_marginTop="@dimen/dim_15"
+            android:layout_marginEnd="@dimen/dim_30"
+            android:hint="@string/confirm_password"
+            android:imeOptions="actionDone"
+            android:inputType="textPassword"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <Button
+        android:id="@+id/btn_signup"
+        android:layout_width="@dimen/dim_325"
+        android:layout_height="@dimen/dim_52"
+        android:layout_gravity="center"
+        android:layout_marginTop="120dp"
+        android:background="@drawable/btn_regular"
+        android:fontFamily="@font/sfuitext_regular"
+        android:text="@string/sign_up"
+        android:textAllCaps="false"
+        android:textSize="@dimen/dim_15sp"
+        app:backgroundTint="@null" />
+
+
+</LinearLayout>

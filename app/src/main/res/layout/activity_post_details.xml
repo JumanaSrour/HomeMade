@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".feature.postDetails.PostDetailsActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:collapsedTitleGravity="top"
+            app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleGravity="top"
+            app:layout_collapseMode="pin"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:titleEnabled="false">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dim_275"
+                    android:layout_alignParentTop="true"
+                    android:layout_gravity="start"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/post_image" />
+
+            </FrameLayout>
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:theme="@style/status_bar_transparent"
+                app:contentInsetEnd="0dp"
+                app:contentInsetLeft="0dp"
+                app:layout_collapseMode="pin"
+                app:contentInsetRight="0dp"
+                app:contentInsetStart="0dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageButton
+                        android:id="@+id/ib_cancel"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="?actionBarSize"
+                        android:layout_height="?actionBarSize"
+                        android:layout_alignParentStart="true"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_remove" />
+
+                    <ImageButton
+                        android:id="@+id/ib_share"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="?actionBarSize"
+                        android:layout_height="?actionBarSize"
+                        android:layout_toStartOf="@id/ib_favorite"
+                        android:src="@drawable/ic_share" />
+
+                    <ImageButton
+                        android:id="@+id/ib_favorite"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="?actionBarSize"
+                        android:layout_height="?actionBarSize"
+                        android:layout_alignParentEnd="true"
+                        android:src="@drawable/ic_favorites" />
+
+                </RelativeLayout>
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:paddingBottom="@dimen/dim_60"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/iv_icon"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dim_10"
+                android:text="@string/tomato_tarte_tatin"
+                android:textColor="@color/black"
+                android:theme="@style/TextViewStyle"
+                tools:ignore="RtlSymmetry" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/dim_10"
+                android:paddingTop="@dimen/dim_5"
+                android:paddingEnd="@dimen/dim_10"
+                android:text="@string/description"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dim_14sp"
+                android:theme="@style/TextViewStyle" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/dim_10"
+                android:paddingTop="@dimen/dim_5"
+                android:paddingEnd="@dimen/dim_10"
+                android:text="@string/full_recipe"
+                android:textSize="@dimen/dim_14sp"
+                android:theme="@style/TextViewStyle" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/dim_10"
+                android:paddingTop="@dimen/dim_10"
+                android:paddingEnd="@dimen/dim_10"
+                android:text="@string/youtube_link"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dim_14sp"
+                android:theme="@style/TextViewStyle" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="@dimen/dim_10"
+                android:paddingTop="@dimen/dim_5"
+                android:text="@string/link"
+                android:textSize="@dimen/dim_14sp"
+                android:theme="@style/TextViewStyle" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_comments"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/dim_10"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                tools:listitem="@layout/comment_card_item" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@android:color/white"
+        android:elevation="@dimen/dim_10"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/dim_5">
+
+        <ImageView
+            android:layout_width="@dimen/dim_48"
+            android:layout_height="@dimen/dim_48"
+            android:layout_gravity="start"
+            android:paddingStart="@dimen/dim_5"
+            android:src="@drawable/user" />
+
+        <EditText
+            style="@style/TextViewStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/et_comment"
+            android:drawableEnd="@drawable/ic_media"
+            android:hint="@string/write_a_comment"
+            android:maxLines="1"
+            android:padding="@dimen/dim_10"
+            android:textColor="@color/txt_color"
+            android:textSize="@dimen/dim_14sp" />
+
+        <Button
+            android:id="@+id/btn_post"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/dim_8"
+            android:layout_marginEnd="@dimen/dim_10"
+            android:background="@drawable/btn_regular"
+            android:fontFamily="@font/sfuitext_regular"
+            android:text="@string/post"
+            android:textAllCaps="false"
+            android:textSize="@dimen/dim_14sp"
+            app:backgroundTint="@null" />
+
+
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

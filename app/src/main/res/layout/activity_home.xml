@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_color"
+    android:orientation="vertical"
+    tools:context=".feature.home.view.HomeActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/main_color">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dim_10">
+
+            <ImageView
+                android:id="@+id/profile_home"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="@dimen/dim_48"
+                android:layout_height="@dimen/dim_48"
+                android:layout_gravity="start"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/edit_profile_icon" />
+
+            <TextView
+                android:id="@+id/tv_ingredients"
+                style="@style/TextViewStyle"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="@dimen/dim_10"
+                android:fontFamily="@font/montserrat"
+                android:paddingLeft="@dimen/dim_140"
+                android:text="@string/my_ingredients"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dim_18sp" />
+
+            <ImageButton
+                android:id="@+id/btn_add_post"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_add_post"/>
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/bg_main_shape"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/flFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:elevation="@dimen/dim_10"
+        android:orientation="vertical">
+
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavView"
+            android:layout_width="match_parent"
+            android:theme="@style/Widget.BottomNavigationView"
+            android:layout_height="wrap_content"
+            app:menu="@menu/main_menu" />
+    </LinearLayout>
+</LinearLayout>
