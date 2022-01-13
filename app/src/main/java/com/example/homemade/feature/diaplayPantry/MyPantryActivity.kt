@@ -26,34 +26,16 @@ class MyPantryActivity : AppCompatActivity() {
             createRecipesDialog()
         }
 
-        btn_my_pantry_pantry.setOnClickListener {
+        btn_add_more.setOnClickListener {
             setCurrentFragment(homeFragment)
-//            createPantryDialog()
         }
     }
 
-    private fun setCurrentFragment(homeFragment: HomeFragment) = supportFragmentManager.beginTransaction().apply {
-        replace(R.id.flFragment, homeFragment)
-            .commit()
-//
-//    private fun createPantryDialog() {
-//        val dialog = CustomAddIngredientDialog().newInstance(
-//            "Add ingredient",
-//            "Add",
-//            "Cancel"
-//        )
-//        dialog.show(supportFragmentManager, "custom ingredients fragment")
-//        dialog.onClickListener(object : CustomAddIngredientDialog.CustomDialogListener{
-//            override fun onDialogPositiveClick(str: String) {
-//                dialog.dismiss()
-//            }
-//
-//            override fun onDialogNegativeClick(str: String) {
-//                dialog.dismiss()
-//            }
-//
-//        })
-    }
+    private fun setCurrentFragment(homeFragment: HomeFragment) =
+        supportFragmentManager.beginTransaction().apply {
+            replace(R.id.flFragment, homeFragment)
+                .commit()
+        }
 
     private fun createRecipesDialog() {
         val dialog = CustomRecipesDialog().newInstance(

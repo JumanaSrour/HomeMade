@@ -11,6 +11,8 @@ import com.example.homemade.R
 import com.example.homemade.feature.diaplayPantry.MyPantryActivity
 import com.example.homemade.ui.adapters.CategoryAdapter
 import com.example.homemade.ui.models.Category
+import com.example.homemade.ui.models.CustomAddIngredientDialog
+import kotlinx.android.synthetic.main.category_card_item.view.*
 import kotlinx.android.synthetic.main.fragment_home.view.*
 
 class HomeFragment : Fragment(R.layout.fragment_home) {
@@ -21,7 +23,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         savedInstanceState: Bundle?
     ): View? {
 
-//        eventsListener()
+        eventsListener()
         val categories = arrayListOf<Category>()
         categories.add(Category(1, category_image = R.drawable.category_diary, "Diary", 3))
         categories.add(Category(2, category_image = R.drawable.category_fruits, "Fruits", 4))
@@ -32,9 +34,33 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         view.rv_home.layoutManager = LinearLayoutManager(activity)
         view.rv_home.adapter = categoryAdapter
 
-        view.btn_my_pantry.setOnClickListener {
+        return view
+    }
+
+    private fun eventsListener() {
+        requireView().btn_my_pantry.setOnClickListener {
             startActivity(Intent(requireContext(), MyPantryActivity::class.java))
         }
-        return view
+        requireView().btn_add_ingredient.setOnClickListener {
+            createAddIngredientDialog()
+        }
+    }
+
+    private fun createAddIngredientDialog() {
+        val dialog = CustomAddIngredientDialog().newInstance(
+            "Add ingredient",
+            "Add",
+            "Cancel"
+        )
+        dialog.show(requireFragmentManager(), "custom ingredients fragment")
+        dialog.onClickListener(object : CustomAddIngredientDialog.CustomDialogListener {
+            override fun onDialogPositiveClick(str: String) {
+                dialog.dismiss()
+            }
+
+            override fun onDialogNegativeClick(str: String) {
+                dialog.dismiss()
+            }
+        })
     }
 }

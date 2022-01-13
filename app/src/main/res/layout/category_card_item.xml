@@ -67,6 +67,7 @@
             android:background="@color/btn_opacity" />
 
         <android.widget.Button
+            android:id="@+id/btn_add_ingredient"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dim_70"
