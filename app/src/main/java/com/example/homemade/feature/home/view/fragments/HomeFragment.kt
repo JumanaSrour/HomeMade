@@ -55,7 +55,7 @@ class HomeFragment : Fragment(R.layout.fragment_home), CategoryAdapter.SetClickL
         val dialog = CustomAddIngredientDialog().newInstance(
             "C",
             "Add ingredient",
-            "Add",
+            "Add ingredient",
             "Add"
         )
         dialog.show(requireFragmentManager(), "custom ingredients fragment")

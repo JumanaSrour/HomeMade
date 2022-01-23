@@ -5,7 +5,7 @@
     android:orientation="vertical"
     style="@style/corner_dialog"
     android:background="@drawable/layout_rounded"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <ImageView
@@ -16,25 +16,6 @@
         android:layout_marginBottom="@dimen/dim_50"
         android:src="@drawable/cancel" />
 
-
-    <!--    <LinearLayout-->
-<!--        android:id="@+id/linearLayout_search"-->
-<!--        android:layout_height="fill_parent"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:orientation="vertical"-->
-<!--        android:gravity="center">-->
-<!--        <EditText android:id="@+id/EditBox"-->
-<!--            android:maxLines="1"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:gravity="left">-->
-<!--        </EditText>-->
-<!--        <ListView android:id="@+id/List"-->
-<!--            android:layout_width="fill_parent"-->
-<!--            android:layout_height="fill_parent"-->
-<!--            android:choiceMode="singleChoice">-->
-<!--        </ListView>-->
-<!--    </LinearLayout>-->
     <TextView
         android:id="@+id/tv_add_ingredient"
         style="@style/TextViewStyle"
@@ -52,24 +33,22 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tv_add_ingredient"
-        android:layout_marginStart="@dimen/dim_10"
+        android:layout_marginHorizontal="@dimen/dim_10"
         android:layout_marginTop="@dimen/dim_10"
-        android:layout_marginEnd="@dimen/dim_10"
         android:layout_marginBottom="@dimen/dim_10"
         android:background="@drawable/search_bg_grey"
-        android:hint="@string/add"
-        app:queryHint="@string/add" />
+        android:hint="@string/add_ingredient_dialog"
+        android:inputType="textAutoComplete"
+        android:paddingStart="@dimen/dim_10" />
 
     <Button
         android:id="@+id/btn_add_ingredient"
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="@dimen/dim_35"
         android:layout_below="@+id/search_ingredient_"
-        android:layout_marginStart="@dimen/dim_10"
-        android:layout_marginTop="@dimen/dim_10"
-        android:layout_marginEnd="@dimen/dim_10"
-        android:layout_marginBottom="@dimen/dim_10"
+        android:layout_marginHorizontal="@dimen/dim_10"
+        android:layout_marginTop="@dimen/dim_30"
         android:background="@drawable/btn_regular"
         android:fontFamily="@font/montserrat"
         android:text="@string/add_ingredient_dialog"

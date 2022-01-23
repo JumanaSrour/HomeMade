@@ -37,6 +37,9 @@ class CategoryAdapter(val context: Context, val data: ArrayList<Category>) :
         holder.categoryCard.setOnClickListener {
             Log.d("TAG", "onBindViewHolder: clicked")
             listener?.onItemClickListener(position, data[position])
+        }
+        holder.categoryAddButton.setOnClickListener {
+            Log.d("TAG", "onBindViewHolder: button clicked")
             listener?.onButtonClickListener(position, holder.categoryAddButton)
         }
         Glide.with(context).load(data[position].category_image).circleCrop().into(holder.categoryImage)
