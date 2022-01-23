@@ -26,6 +26,13 @@ class GroceryFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_grocery, container, false)
         groceryAdapter = GroceryAdapter(requireContext(), grocery)
         view.rv_grocery.adapter = groceryAdapter
+//        view.rg_grocery.setOnCheckedChangeListener { radioGroup, checkedId ->
+//            when (checkedId) {
+//                R.id.rb_potato -> {
+//                    rb_potato.visibility = View.VISIBLE
+//                }
+//            }
+//        }
         return view
     }
 }

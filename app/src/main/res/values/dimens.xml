@@ -38,4 +38,5 @@
     <dimen name="dim_25">25dp</dimen>
     <dimen name="dim_110">110dp</dimen>
     <dimen name="dim_275">275dp</dimen>
+    <dimen name="dim_40">40dp</dimen>
 </resources>

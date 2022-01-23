@@ -8,30 +8,16 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <Button
-        android:id="@+id/ib_cancel_ingredient"
+    <ImageView
+        android:id="@+id/iv_cancel_ingredient"
         style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:drawableLeft="@drawable/cancel" />
+        android:layout_width="@dimen/dim_40"
+        android:layout_height="@dimen/dim_40"
+        android:layout_marginBottom="@dimen/dim_50"
+        android:src="@drawable/cancel" />
 
 
-    <TextView
-        android:id="@+id/tv_add_ingredient"
-        style="@style/TextViewStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="@dimen/dim_30"
-        android:layout_marginTop="@dimen/dim_20"
-        android:layout_toEndOf="@+id/ib_cancel_ingredient"
-        android:gravity="center"
-        android:text="@string/add_ingredient"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="@dimen/dim_16sp" />
-
-<!--    <LinearLayout-->
+    <!--    <LinearLayout-->
 <!--        android:id="@+id/linearLayout_search"-->
 <!--        android:layout_height="fill_parent"-->
 <!--        android:layout_width="match_parent"-->
@@ -49,17 +35,29 @@
 <!--            android:choiceMode="singleChoice">-->
 <!--        </ListView>-->
 <!--    </LinearLayout>-->
+    <TextView
+        android:id="@+id/tv_add_ingredient"
+        style="@style/TextViewStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dim_10"
+        android:text="@string/add_ingredient"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/dim_12sp" />
+
     <EditText
         android:id="@+id/search_ingredient_"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/add"
         android:layout_below="@+id/tv_add_ingredient"
         android:layout_marginStart="@dimen/dim_10"
         android:layout_marginTop="@dimen/dim_10"
         android:layout_marginEnd="@dimen/dim_10"
         android:layout_marginBottom="@dimen/dim_10"
         android:background="@drawable/search_bg_grey"
+        android:hint="@string/add"
         app:queryHint="@string/add" />
 
     <Button
@@ -76,7 +74,7 @@
         android:fontFamily="@font/montserrat"
         android:text="@string/add_ingredient_dialog"
         android:textAllCaps="false"
-        android:textSize="@dimen/dim_15sp"
+        android:textSize="@dimen/dim_12sp"
         app:backgroundTint="@null" />
 
 </RelativeLayout>

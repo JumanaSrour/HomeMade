@@ -14,12 +14,12 @@
         android:layout_weight="1"
         android:textAlignment="center"
         android:padding="@dimen/dim_10"
+        android:layout_marginHorizontal="@dimen/dim_5"
         android:textColor="@color/black"
-        android:textSize="@dimen/dim_16sp"
+        android:textSize="@dimen/dim_14sp"
         style="@style/TextViewStyle"/>
 
         <LinearLayout
-            android:paddingTop="@dimen/dim_10"
             android:layout_gravity="center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -30,8 +30,7 @@
                 android:id="@+id/btn_alert_users"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:layout_marginEnd="@dimen/dim_20"
-                android:layout_marginStart="@dimen/dim_20"
+                android:layout_marginHorizontal="@dimen/dim_5"
                 android:fontFamily="@font/montserrat"
                 android:background="@drawable/btn_regular"
                 android:gravity="center"
@@ -48,8 +47,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginTop="@dimen/dim_10"
-                android:layout_marginStart="@dimen/dim_20"
-                android:layout_marginEnd="@dimen/dim_20"
+                android:layout_marginHorizontal="@dimen/dim_5"
                 android:fontFamily="@font/montserrat"
                 android:text="@string/recipes_from_the_app"
                 android:textAllCaps="false"
@@ -63,13 +61,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginTop="@dimen/dim_10"
-                android:layout_marginStart="@dimen/dim_20"
-                android:layout_marginEnd="@dimen/dim_20"
+                android:layout_marginHorizontal="@dimen/dim_5"
                 android:fontFamily="@font/montserrat"
                 android:text="@string/results_from_the_internet"
                 android:textAllCaps="false"
                 android:textSize="12sp"
-                android:layout_marginBottom="@dimen/dim_35"
+                android:layout_marginBottom="@dimen/dim_20"
                 app:backgroundTint="@null" />
 
         </LinearLayout>

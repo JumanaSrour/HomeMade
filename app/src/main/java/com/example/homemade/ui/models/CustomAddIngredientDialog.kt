@@ -61,10 +61,9 @@ class CustomAddIngredientDialog : DialogFragment() {
         }
 
         if (!TextUtils.isEmpty(btnCancel)) {
-            ib_cancel_ingredient.visibility = View.VISIBLE
-            ib_cancel_ingredient.text = btnCancel
+            iv_cancel_ingredient.visibility = View.VISIBLE
         } else {
-            ib_cancel_ingredient.visibility = View.GONE
+            iv_cancel_ingredient.visibility = View.GONE
         }
 
         if (!TextUtils.isEmpty(btnAdd)) {
@@ -78,7 +77,7 @@ class CustomAddIngredientDialog : DialogFragment() {
             listener?.onDialogPositiveClick("Success")
         }
 
-        ib_cancel_ingredient.setOnClickListener {
+        iv_cancel_ingredient.setOnClickListener {
             listener?.onDialogNegativeClick("Failed")
         }
     }

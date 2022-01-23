@@ -32,7 +32,7 @@
             android:textColor="@color/black"
             android:paddingTop="@dimen/dim_15"
             android:paddingStart="@dimen/dim_15"
-            android:textSize="@dimen/dim_15sp"
+            android:textSize="@dimen/dim_14sp"
             android:layout_marginStart="@dimen/dim_50"
             tools:ignore="RtlSymmetry" />
 
@@ -68,14 +68,14 @@
 
         <android.widget.Button
             android:id="@+id/btn_add_ingredient"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/dim_40"
+            android:layout_height="@dimen/dim_30"
             android:layout_marginTop="@dimen/dim_70"
             android:layout_marginStart="@dimen/dim_15"
             android:background="@drawable/btn_rectangle_shape"
             android:text="@string/add"
             android:fontFamily="@font/montserrat"
-            android:textSize="@dimen/dim_15sp"
+            android:textSize="@dimen/dim_12sp"
             android:layout_marginBottom="@dimen/dim_15"
             android:textColor="@color/main_color"
             android:textAllCaps="false"/>

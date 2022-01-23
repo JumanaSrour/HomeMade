@@ -13,14 +13,13 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="@dimen/dim_10">
+            android:layout_height="wrap_content">
 
             <ImageButton
                 android:id="@+id/profile_home"
                 style="@style/Widget.AppCompat.Button.Borderless"
-                android:layout_width="@dimen/dim_48"
-                android:layout_height="@dimen/dim_48"
+                android:layout_width="@dimen/dim_40"
+                android:layout_height="@dimen/dim_40"
                 android:layout_gravity="start"
                 android:adjustViewBounds="true"
                 android:scaleType="centerCrop"
@@ -29,23 +28,26 @@
             <TextView
                 android:id="@+id/tv_ingredients"
                 style="@style/TextViewStyle"
-                android:layout_alignParentStart="true"
-                android:layout_marginTop="@dimen/dim_10"
                 android:fontFamily="@font/montserrat"
-                android:paddingLeft="@dimen/dim_140"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dim_10"
                 android:text="@string/my_pantry"
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:textSize="@dimen/dim_18sp" />
+                android:textSize="@dimen/dim_14sp" />
 
 
             <androidx.appcompat.widget.SearchView
                 android:id="@+id/sv_search"
                 android:layout_width="match_parent"
-                android:layout_margin="@dimen/dim_15"
-                android:background="@drawable/search_bg"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/tv_ingredients"/>
+                android:layout_height="@dimen/dim_30"
+                android:layout_below="@+id/tv_ingredients"
+                android:layout_marginHorizontal="@dimen/dim_15"
+                android:layout_marginStart="@dimen/dim_15"
+                android:layout_marginTop="@dimen/dim_15"
+                android:layout_marginEnd="@dimen/dim_15"
+                android:layout_marginBottom="@dimen/dim_15"
+                android:background="@drawable/search_bg" />
 
         </RelativeLayout>
 
@@ -53,9 +55,9 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_pantry"
         android:layout_width="match_parent"
-        android:layout_weight="1"
         android:layout_height="wrap_content"
         tools:listitem="@layout/pantry_card_item"
+        android:layout_weight="1"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         android:orientation="vertical"/>
 
@@ -81,7 +83,7 @@
             android:text="@string/add_more"
             android:textAllCaps="false"
             android:textColor="@color/bold_grey_txt"
-            android:textSize="@dimen/dim_14sp" />
+            android:textSize="@dimen/dim_12sp" />
 
         <Button
             android:id="@+id/btn_see_recipes_pantry"
@@ -96,6 +98,6 @@
             android:text="@string/see_recipes"
             android:textAllCaps="false"
             android:textColor="@color/bold_grey_txt"
-            android:textSize="@dimen/dim_14sp" />
+            android:textSize="@dimen/dim_12sp" />
     </LinearLayout>
 </LinearLayout>

@@ -31,14 +31,14 @@
             <TextView
                 android:id="@+id/tv_ingredients"
                 style="@style/TextViewStyle"
-                android:layout_alignParentStart="true"
                 android:layout_marginTop="@dimen/dim_10"
                 android:fontFamily="@font/montserrat"
-                android:paddingLeft="@dimen/dim_140"
                 android:text="@string/my_ingredients"
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:textSize="@dimen/dim_18sp" />
+                android:layout_marginHorizontal="@dimen/dim_120"
+                android:layout_centerInParent="true"
+                android:textSize="@dimen/dim_16sp" />
 
             <ImageButton
                 android:id="@+id/btn_add_post"

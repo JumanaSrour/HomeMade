@@ -32,7 +32,7 @@
             android:textColor="@color/black"
             android:paddingTop="@dimen/dim_15"
             android:paddingStart="@dimen/dim_15"
-            android:textSize="@dimen/dim_15sp"
+            android:textSize="@dimen/dim_14sp"
             android:layout_marginStart="@dimen/dim_50"
             tools:ignore="RtlSymmetry" />
 
@@ -73,7 +73,7 @@
                 android:paddingBottom="@dimen/dim_5"
                 android:text="@string/sour_cream"
                 android:textColor="@color/black"
-                android:textSize="@dimen/dim_15sp" />
+                android:textSize="@dimen/dim_12sp" />
 
             <Button
                 style="@style/Widget.AppCompat.Button.Borderless"
