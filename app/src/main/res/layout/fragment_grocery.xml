@@ -3,14 +3,36 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".feature.home.view.fragments.GroceryFragment">
 
-
+<TextView
+    android:id="@+id/tv_myList"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/what_s_in_my_list"
+    android:textSize="@dimen/dim_14sp"
+    android:textColor="@color/black"
+    android:padding="@dimen/dim_20"
+    android:fontFamily="@font/montserrat"
+    />
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_grocery"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:padding="@dimen/dim_5"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/shopping_list_item"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         android:orientation="vertical"/>
+    <TextView
+        android:id="@+id/tv_gotList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/what_i_got"
+        android:textSize="@dimen/dim_14sp"
+        android:textColor="@color/black"
+        android:padding="@dimen/dim_20"
+        android:fontFamily="@font/montserrat"
+        />
 </LinearLayout>

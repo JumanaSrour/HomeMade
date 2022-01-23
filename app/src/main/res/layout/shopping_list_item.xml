@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:orientation="vertical">
+
+<RadioGroup
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/dim_10"
+    android:orientation="vertical">
+
+    <RadioButton
+        android:id="@+id/rb_potato"
+        android:fontFamily="@font/montserrat"
+        android:layout_width="match_parent"
+        android:textSize="@dimen/dim_14sp"
+        android:layout_height="match_parent"
+        android:drawableEnd="@drawable/ic_delete"
+        android:buttonTint="@color/bold_grey_txt"
+        android:text="@string/potato"
+         />
+</RadioGroup>
+
+</LinearLayout>

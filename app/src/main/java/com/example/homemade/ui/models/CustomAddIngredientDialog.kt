@@ -3,6 +3,7 @@ package com.example.homemade.ui.models
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
+import android.text.Editable
 import android.text.TextUtils
 import android.view.LayoutInflater
 import android.view.View
@@ -12,20 +13,23 @@ import com.example.homemade.R
 import kotlinx.android.synthetic.main.custom_add_ingredient_dialog.*
 
 class CustomAddIngredientDialog : DialogFragment() {
+    private var btnCancel: String? = null
     private var title: String? = null
     private var btnAdd: String? = null
-    private var btnCancel: String? = null
+    private var search: String? = null
     private var listener: CustomDialogListener? = null
 
     fun newInstance(
-        title: String,
-        btnAdd: String,
         btnCancel: String,
+        title: String,
+        search: String,
+        btnAdd: String,
     ): CustomAddIngredientDialog {
         val args = Bundle()
-        args.putString("title", title)
-        args.putString("btnAdd", btnAdd)
         args.putString("btnCancel", btnCancel)
+        args.putString("title", title)
+        args.putString("search", search)
+        args.putString("btnAdd", btnAdd)
         val fragment = CustomAddIngredientDialog()
         fragment.arguments = args
         return fragment
@@ -49,16 +53,23 @@ class CustomAddIngredientDialog : DialogFragment() {
             tv_add_ingredient.visibility = View.GONE
         }
 
+        if (!TextUtils.isEmpty(search)) {
+            search_ingredient_.visibility = View.VISIBLE
+            search_ingredient_.text = search as Editable
+        } else {
+            search_ingredient_.visibility = View.GONE
+        }
+
         if (!TextUtils.isEmpty(btnCancel)) {
             ib_cancel_ingredient.visibility = View.VISIBLE
-            ib_cancel_ingredient.text = title
+            ib_cancel_ingredient.text = btnCancel
         } else {
             ib_cancel_ingredient.visibility = View.GONE
         }
 
         if (!TextUtils.isEmpty(btnAdd)) {
             btn_add_ingredient.visibility = View.VISIBLE
-            btn_add_ingredient.text = title
+            btn_add_ingredient.text = btnAdd
         } else {
             btn_add_ingredient.visibility = View.GONE
         }

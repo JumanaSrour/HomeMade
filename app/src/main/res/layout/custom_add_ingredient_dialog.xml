@@ -11,8 +11,8 @@
     <Button
         android:id="@+id/ib_cancel_ingredient"
         style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:drawableLeft="@drawable/cancel" />
 
 
@@ -21,36 +21,62 @@
         style="@style/TextViewStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/dim_50"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="@dimen/dim_30"
         android:layout_marginTop="@dimen/dim_20"
         android:layout_toEndOf="@+id/ib_cancel_ingredient"
+        android:gravity="center"
         android:text="@string/add_ingredient"
         android:textAlignment="center"
         android:textColor="@color/black"
-        android:textSize="@dimen/dim_18sp" />
+        android:textSize="@dimen/dim_16sp" />
 
-
-    <androidx.appcompat.widget.SearchView
-        android:id="@+id/search_ingredient"
+<!--    <LinearLayout-->
+<!--        android:id="@+id/linearLayout_search"-->
+<!--        android:layout_height="fill_parent"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:orientation="vertical"-->
+<!--        android:gravity="center">-->
+<!--        <EditText android:id="@+id/EditBox"-->
+<!--            android:maxLines="1"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:gravity="left">-->
+<!--        </EditText>-->
+<!--        <ListView android:id="@+id/List"-->
+<!--            android:layout_width="fill_parent"-->
+<!--            android:layout_height="fill_parent"-->
+<!--            android:choiceMode="singleChoice">-->
+<!--        </ListView>-->
+<!--    </LinearLayout>-->
+    <EditText
+        android:id="@+id/search_ingredient_"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/dim_10"
+        android:hint="@string/add"
         android:layout_below="@+id/tv_add_ingredient"
-        android:background="@drawable/search_bg_grey"/>
+        android:layout_marginStart="@dimen/dim_10"
+        android:layout_marginTop="@dimen/dim_10"
+        android:layout_marginEnd="@dimen/dim_10"
+        android:layout_marginBottom="@dimen/dim_10"
+        android:background="@drawable/search_bg_grey"
+        app:queryHint="@string/add" />
 
     <Button
         android:id="@+id/btn_add_ingredient"
         style="@style/Widget.AppCompat.Button.Borderless"
-        android:background="@drawable/btn_regular"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:layout_margin="@dimen/dim_10"
+        android:layout_below="@+id/search_ingredient_"
+        android:layout_marginStart="@dimen/dim_10"
+        android:layout_marginTop="@dimen/dim_10"
+        android:layout_marginEnd="@dimen/dim_10"
+        android:layout_marginBottom="@dimen/dim_10"
+        android:background="@drawable/btn_regular"
         android:fontFamily="@font/montserrat"
         android:text="@string/add_ingredient_dialog"
         android:textAllCaps="false"
         android:textSize="@dimen/dim_15sp"
-        android:layout_below="@id/search_ingredient"
-        android:layout_marginBottom="@dimen/dim_35"
         app:backgroundTint="@null" />
 
 </RelativeLayout>

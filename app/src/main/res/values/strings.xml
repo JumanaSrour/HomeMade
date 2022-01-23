@@ -73,4 +73,9 @@
     <string name="recipes_by">Recipes by</string>
     <string name="add_ingredient">Add ingredient</string>
     <string name="add_ingredient_dialog">Add</string>
+    <string name="potato">potato</string>
+    <string name="tomato">tomato</string>
+    <string name="eggplant">eggplant</string>
+    <string name="what_s_in_my_list">What\'s in my list</string>
+    <string name="what_i_got">What I got</string>
 </resources>
