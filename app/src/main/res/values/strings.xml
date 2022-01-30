@@ -78,4 +78,11 @@
     <string name="eggplant">eggplant</string>
     <string name="what_s_in_my_list">What\'s in my list</string>
     <string name="what_i_got">What I got</string>
+
+    <string-array name="grocery_list">
+        <item>eggplant</item>
+        <item>cucumber</item>
+        <item>garlic</item>
+        <item>parsley</item>
+    </string-array>
 </resources>

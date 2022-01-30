@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout class="androidx.appcompat.app.AlertController$RecycleListView"
+<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+    class="androidx.appcompat.app.AlertController$RecycleListView"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:orientation="vertical"
@@ -28,25 +29,31 @@
         android:textColor="@color/black"
         android:textSize="@dimen/dim_12sp" />
 
-    <EditText
-        android:id="@+id/search_ingredient_"
+
+    <AutoCompleteTextView
+        android:id="@+id/et_ingredient"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tv_add_ingredient"
+        android:layout_height="@dimen/dim_35"
         android:layout_marginHorizontal="@dimen/dim_10"
-        android:layout_marginTop="@dimen/dim_10"
-        android:layout_marginBottom="@dimen/dim_10"
+        android:layout_marginTop="@dimen/dim_35"
+        android:layout_marginBottom="@dimen/dim_30"
         android:background="@drawable/search_bg_grey"
-        android:hint="@string/add_ingredient_dialog"
-        android:inputType="textAutoComplete"
-        android:paddingStart="@dimen/dim_10" />
+        android:drawableStart="@drawable/ic_search"
+        android:paddingStart="@dimen/dim_5"
+        android:imeOptions="actionSearch"
+        android:maxLines="1"
+        android:fontFamily="@font/montserrat"
+        android:textColorHint="@color/txt_color"
+        android:textSize="@dimen/dim_12sp"
+        app:iconPosition="start"
+        android:inputType="textAutoComplete|textAutoCorrect"
+        tools:ignore="RtlSymmetry" />
 
     <Button
         android:id="@+id/btn_add_ingredient"
-        style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dim_35"
-        android:layout_below="@+id/search_ingredient_"
+        android:layout_below="@+id/et_ingredient"
         android:layout_marginHorizontal="@dimen/dim_10"
         android:layout_marginTop="@dimen/dim_30"
         android:background="@drawable/btn_regular"

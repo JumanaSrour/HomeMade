@@ -3,7 +3,6 @@ package com.example.homemade.ui.models
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
-import android.text.Editable
 import android.text.TextUtils
 import android.view.LayoutInflater
 import android.view.View
@@ -54,10 +53,10 @@ class CustomAddIngredientDialog : DialogFragment() {
         }
 
         if (!TextUtils.isEmpty(search)) {
-            search_ingredient_.visibility = View.VISIBLE
-            search_ingredient_.text = search as Editable
+            et_ingredient.visibility = View.VISIBLE
+            et_ingredient.hint = search
         } else {
-            search_ingredient_.visibility = View.GONE
+            et_ingredient.visibility = View.GONE
         }
 
         if (!TextUtils.isEmpty(btnCancel)) {
@@ -95,6 +94,9 @@ class CustomAddIngredientDialog : DialogFragment() {
         }
         arguments?.getString("btnCancel").let {
             btnCancel = it
+        }
+        arguments?.getString("search").let {
+            search = it
         }
     }
 
